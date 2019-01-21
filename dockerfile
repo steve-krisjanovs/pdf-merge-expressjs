@@ -29,7 +29,8 @@ CMD ["node","./index.js"]
 #to build docker container:
 # docker build --rm -f "dockerfile" -t pdf-merge-expressjs:latest .
 #
-#to run docker container:
+#to run docker container (examples below):
 # docker run -p 3000:3000 pdf-merge-expressjs:latest
+# docker run -e EXPRESS_REQUEST_LIMIT='100mb' -p 3000:3000 pdf-merge-expressjs:latest
 #
 ###################################################################
