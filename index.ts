@@ -139,7 +139,6 @@ var main = async () => {
                     res.status(500).send("An error occured when running PdfMerger.PdfMergeAsync(inputfiles, PdfMergeTarget.Stream)").end();
                     return;
                 }
-                res.sendStatus(200).end();
             });
         });
     }

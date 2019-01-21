@@ -9,9 +9,8 @@ EXPOSE ${EXPRESS_PORT}
 
 WORKDIR /myapp
 COPY ./package.json /myapp/package.json
-COPY ./index.js /myapp/index.js
+COPY ./tsconfig.json /myapp/tsconfig.json
 COPY ./index.ts ./myapp/index.ts
-COPY ./index.js.map /myapp/index.js.map
 
 #go to myapp dir and finalize install
 RUN cd /myapp
@@ -23,6 +22,7 @@ RUN apk add --update \
 #set up node deps
 RUN npm install -g typescript
 RUN npm install
+RUN tsc -p tsconfig.json
 CMD ["node","./index.js"]
 
 # NOTES ###########################################################
