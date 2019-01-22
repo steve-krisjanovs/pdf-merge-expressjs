@@ -40,4 +40,14 @@ HTTP POST {server}:{port}/mergepdf
 
 # Docker notes
 
-See contents in dockerfile for details (comments provided at bottom of file)
+Dockerhub URL:
+https://hub.docker.com/r/skrisjanovs1/pdf-merge-expressjs
+
+Github repository URL: 
+https://github.com/steve-krisjanovs/pdf-merge-expressjs
+
+Run container with defaults (50mb http post limit):
+`docker run -p 3000:3000 skrisjanovs1/pdf-merge-expressjs:latest`
+
+Run container with 100mb http post limit:
+`docker run -e EXPRESS_REQUEST_LIMIT='100mb' -p 3000:3000 skrisjanovs1/pdf-merge-expressjs:latest`
