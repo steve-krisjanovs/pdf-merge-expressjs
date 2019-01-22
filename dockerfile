@@ -10,7 +10,7 @@ EXPOSE ${EXPRESS_PORT}
 WORKDIR /myapp
 COPY ./package.json /myapp/package.json
 COPY ./tsconfig.json /myapp/tsconfig.json
-COPY ./index.ts ./myapp/index.ts
+COPY ./index.ts /myapp/index.ts
 
 #go to myapp dir and finalize install
 RUN cd /myapp
